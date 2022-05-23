@@ -1,3 +1,5 @@
+import os
+
 """
 Django settings for perdle project.
 
@@ -20,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-*jpehrwj!v7$24!5iv2hhvc4=ve8v_r0a2#)2emk)8awljpn^4'
+SECRET_KEY = os.getenv("SECRET_KEY") 
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
